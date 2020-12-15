@@ -136,14 +136,18 @@
 //     for example the one on ESP-WROWER-KIT ###
 // #############################################
 #define TFT_INVERT_ROTATION 0
+#ifndef TFT_INVERT_ROTATION1
 #define TFT_INVERT_ROTATION1 0
+#endif
 
 // ################################################
 // ### SET TO 0X00 FOR DISPLAYS WITH RGB MATRIX ###
 // ### SET TO 0X08 FOR DISPLAYS WITH BGR MATRIX ###
 // ### For ESP-WROWER-KIT set to 0x00           ###
 // ################################################
+#ifndef TFT_RGB_BGR
 #define TFT_RGB_BGR 0x08
+#endif
 
 // ##############################################################
 // ### Define ESP32 SPI pins to which the display is attached ###
@@ -183,7 +187,10 @@
 
 #define DEFAULT_GAMMA_CURVE 0
 #define DEFAULT_SPI_CLOCK   26000000
+
+#ifndef DEFAULT_DISP_TYPE
 #define DEFAULT_DISP_TYPE   DISP_TYPE_ILI9341
+#endif
 //----------------------------------------------------------------------------
 
 #endif  // CONFIG_EXAMPLE_ESP_WROVER_KIT
